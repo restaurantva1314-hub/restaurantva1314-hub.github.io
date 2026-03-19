@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuji Asian Cuisine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header {
+    background: white;
+  }
 
+  .header-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2% 3%;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: clamp(100px, 15vw, 200px); /* logo grows on small screens */
+    margin-right: 2%;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(24px, 6vw, 50px); /* text grows on small screens */
+    color: #c0392b;
+  }
+
+  /* Optional: stack logo and text on very small screens */
+  @media (max-width: 500px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .hero {
+      background-image: url("images/front.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 180px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    .hero p a {
+      background: #f1c40f;
+      color: #c0392b;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #c0392b;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .slideshow-container {
+      max-width: 500px;
+      height: 300px; /* important */
+      margin: auto;
+      position: relative;
+    }
+    
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fills entire area */
+      border-radius: 10px;
+    }
+    .slide {
+      height: 100%;
+    }
+    
+    .slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: center;
+      border-radius: 10px;
+    }
+    
+    /* Fade animation */
+    .fade {
+      animation: fadeEffect 1s;
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: 0.4;}
+      to {opacity: 1;}
+    }
+
+    
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px; /* fixed height for all images */
+      object-fit: cover; /* crop/scale images to fill the box */
+      border-radius: 8px;
+    }
+    .menu-item h4 {
+      margin: 10px 0 5px;
+      text-align: center;
+    }
+    .menu-item p {
+      text-align: center;
+      color: #555;
+    }
+    .contact p {
+      margin: 6px 0;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #eee;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+    
+  </style>
+</head>
+<body>
+<section>
+<header>
+
+ <div class="header-container"style="max-width:1000px; margin:auto; padding:2% 3%; display:flex; align-items:center;"> 
+ 
+    <img src="images/logo.pdf" alt="Asian Fuji Logo" style="height:10vw; max-height:180px; margin-right:2%;">
+    
+    <h1 style="margin:0;  color:#c0392b;">Fuji Asian Cuisine</h1>
+
+  </div>  
+
+</header>
+
+
+  
+</section>
+<section class="hero">
+  <p> <!-- Order Online button on the right -->
+  <a href="https://www.mealage.com/r.jsp?id=71013" style="background:#FFFFFF; color:#c0392b; text-decoration:none; padding:12px 24px; font-weight:bold; border-radius:5px;">Order Online</a>
+</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align: center;">Welcome to Fuji Asian Cuisine, we bring the rich flavors of Asia to your table with fresh ingredients and authentic recipes. From sushi rolls and steaming dumplings to flavorful stir-fries and fried rice, our menu is crafted to delight every palate. Whether you’re enjoying a cozy dine-in experience, grabbing takeout, or having your favorite dishes delivered, we’re committed to providing delicious meals made with care.</p>
+</section>
+
+
+<section id="menu">
+  <h2>Our Popular Dishes</h2>
+
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/1.pdf">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/2.pdf">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/3.pdf">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/4.pdf">
+    </div>
+
+    <!-- add more slides if needed -->
+  </div>
+
+</section>
+<section id="contact" class="contact">
+  <h2 style="text-align:center; color:#c0392b; margin-bottom:30px;">Contact & Hours</h2>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1000px; margin:auto;">
+
+    <!-- Left: Google Map -->
+    <div style="flex:1 1 400px; min-width:300px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.8945605263066!2d-77.35541712578906!3d37.60464047202874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b1184794b97555%3A0x216c75a087d1ceef!2sFuji%20Asian%20Cuisine!5e0!3m2!1sen!2sus!4v1773375498720!5m2!1sen!2sus"
+        width="100%"
+        height="300"
+        style="border:0; border-radius:8px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Right: Business Info -->
+    <div style="flex:1 1 400px; min-width:300px; background:#fdf6f5; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+
+      <!-- Address -->
+      <div style="display:flex; margin-bottom:12px;">
+        <strong style="width:150px; text-align:left;">Address:</strong>
+        <span>7330 Bell Creek Rd, Mechanicsville, VA 23111</span>
+      </div>
+
+      <!-- Phone -->
+      <div style="display:flex; margin-bottom:12px;">
+        <strong style="width:150px; text-align:left;">Phone:</strong>
+        <span><a href="tel:+18045592953" style="color:#c0392b; text-decoration:none;">(804) 559‑2953</a></span>
+      </div>
+
+      <!-- Hours -->
+      <div style="display:flex; margin-bottom:0;">
+        <strong style="width:150px; text-align:left;">Hours of Operation:</strong>
+        <div style="display:flex; flex-direction:column;">
+          <span>Monday: 11 AM – 9:30 PM</span>
+          <span>Tuesday: 11 AM – 9:30 PM</span>
+          <span>Wednesday: 11 AM – 9:30 PM</span>
+          <span>Thursday: 11 AM – 9:30 PM</span>
+          <span>Friday: 11 AM – 9:30 PM</span>
+          <span>Saturday: 11:30 AM – 9:30 PM</span>
+          <span>Sunday: 11:30 AM – 9 PM</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+
+  slides[slideIndex - 1].style.display = "block";
+
+  setTimeout(showSlides, 3000); // change every 3 seconds
+}
+</script>
+
+</body>
+  <footer>
+  &copy; 2026 Fuji Asian Cuisine
+</footer>
+</html>
